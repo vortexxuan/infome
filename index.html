@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./main.js">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/font-icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/font-icon/boxicons-2.1.2/css/boxicons.css">
+    <link rel="stylesheet" href="./assets/font-icon/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300&display=swap" rel="stylesheet">
+    <title>Info: Nguyễn Trường Xuân</title>
+</head>
+<body>
+  <div id="main">
+    <div id="body-container">
+        <div id="info">
+          <div class="header">
+            <button id="mode-btn">
+             <img id="sun" src="./assets/IMG/sun.png" alt="">
+             <img id="moon" src="./assets/IMG/moon.png" alt="">
+            </button>
+          </div>
+         <div class="i4-content">
+            <div class="content-items">
+               <img id="avt" src="./assets/IMG/avt.jpg" alt="">
+            </div>
+            <div class="content-items">
+              <h1 id="name">Nguyen Truong Xuan<i class='bx bxs-check-circle'></i></h1>
+              
+            </div>
+            <div class="content-items">
+              <p id="sub-name">Web Developer</p>
+            </div>
+         </div>
+         <div class="contact-container"> 
+          <div class="contact-list"><a href="https://zalo.me/0393365209" target="_blank"><img id="img-icon1"src="./assets/IMG/zalo.png" alt="zalo"></a></div>
+          <div class="contact-list"><a href="https://www.tiktok.com/@raisterxuan" target="_blank"><img id="img-icon2" src="./assets/IMG/toptop.png" alt="tiktok"></a></div>
+          <div class="contact-list"><a href="https://www.facebook.com/vortexxuan359" target="_blank"><img id="img-icon3" src="./assets/IMG/facebook.png" alt="facebook"></a></div>
+          <div class="contact-list"><a href="https://www.instagram.com/davidxuan359/" target="_blank" ><img id="img-icon4" src="./assets/IMG/instag.png" alt="instagram"></a></div>
+        </div>
+        <div class="navigation">
+          <div id="nav1">
+            <a id="sub-nav1" href="https://www.facebook.com/messages/t/100037202809839" target="_blank" >Nhắn tin</a>
+          </div>
+          <div id="nav2">
+            <a id="sub-nav2" href="https://vortexxuan.github.io/xuanfedev/" target="_blank" >Xem thêm</a>
+
+          </div>
+        </div>
+        <div class="footer">
+          <div id="footer-list1">
+            <i class='bx bxs-heart bx-tada ' id="icon-contact1"  ></i>
+            <h2 id="footer-sub1">459.7k</h2>
+          </div>
+          <div id="footer-list2">
+            <i class='bx bxs-comment bx-tada ' id="icon-contact2" ></i>
+            <h2 id="footer-sub2">176.9k</h2>
+          </div>
+          <div id="footer-list3">
+            <i class='bx bxs-share bx-tada bx-rotate-180 ' id="icon-contact3" ></i>
+            <h2 id="footer-sub3">387.2k</h2>
+          </div>
+        </div>
+
+        </div>
+       
+    </div>
+  </div>
+  <script>
+    // NUT
+    var bTN=document.getElementById('mode-btn')
+    var sunBtn=document.getElementById('sun')
+    var moonBtn=document.getElementById('moon')
+    // BIEN CAC THANH PHAN
+    var backgroundContainer=document.getElementById('body-container')
+    var infoContainer=document.getElementById('info')
+    var avtMode=document.getElementById('avt')
+    var nameMode=document.getElementById('name')
+    var sub_nameMode=document.getElementById('sub-name')
+    var img_icon1=document.getElementById('img-icon1')
+    var img_icon2=document.getElementById('img-icon2')
+    var img_icon3=document.getElementById('img-icon3')
+    var img_icon4=document.getElementById('img-icon4')
+    var navMode1=document.getElementById('nav1')
+    var sub_navMode1=document.getElementById('sub-nav1')
+    var navMode2=document.getElementById('nav2')
+    var sub_navMode2=document.getElementById('sub-nav2')
+
+    var footer_list1=document.getElementById('footer-list1')
+    var footer_list2=document.getElementById('footer-list2')
+    var footer_list3=document.getElementById('footer-list3')
+    var sub_list1=document.getElementById('footer-sub1')
+    var sub_list2=document.getElementById('footer-sub2')
+    var sub_list3=document.getElementById('footer-sub3')
+    var ftSub=document.getElementById('footer-sub')
+    var iconCt1=document.getElementById('icon-contact1')
+    var iconCt2=document.getElementById('icon-contact2')
+    var iconCt3=document.getElementById('icon-contact3')
+
+    // 
+    sunBtn.onclick=function(){
+      var bg = backgroundContainer.style.background='#444';
+      if (bg){       
+        sunBtn.style.display='none'
+        moonBtn.style.display='block'
+        bTN.style.background='cyan'
+        moonBtn.style.transform='translateX(20px)'
+        moonBtn.style.transition='all ease-in .5s;'
+        backgroundContainer.style.backgroundColor='#fff';
+        infoContainer.style.backgroundColor='#fff';
+        infoContainer.style.boxShadow='3px 0px 6px 0px #000';
+        avtMode.style.border='#cccc solid 3px'
+        avtMode.style.boxShadow='6px 0px 12px -5px #000'
+        nameMode.style.color='#000'   
+        sub_nameMode.style.color='#000' 
+        img_icon1.style.backgroundColor='#96d6ff'  
+        img_icon1.style.boxShadow='6px 0px 12px -5px #000'
+        img_icon2.style.backgroundColor='#96d6ff'
+        img_icon2.style.boxShadow='6px 0px 12px -5px #000'  
+        img_icon3.style.backgroundColor='#96d6ff'
+        img_icon3.style.boxShadow='6px 0px 12px -5px #000'  
+        img_icon4.style.backgroundColor='#96d6ff'  
+        img_icon4.style.boxShadow='6px 0px 12px -5px #000'
+        // 
+        navMode1.style.backgroundColor='#96d6ff'
+        navMode2.style.backgroundColor='#96d6ff'
+        sub_navMode1.style.color='#3B00B3'
+        sub_navMode2.style.color='#3B00B3'
+        sub_navMode1.style.fontWeight='500'
+        sub_navMode2.style.fontWeight='500'
+
+        // 
+        footer_list1.style.backgroundColor='#fff'
+        footer_list1.style.borderRight='solid #000 1px'
+        footer_list1.style.borderRadius='0'
+        sub_list1.style.color='#000'
+        sub_list1.style.fontWeight='400'
+        iconCt1.style.color='#000'
+
+        footer_list2.style.backgroundColor='#FFF'
+        footer_list2.style.borderRight='solid #000 1px'
+        footer_list2.style.borderRadius='0'
+        sub_list2.style.color='#000'
+        sub_list2.style.fontWeight='400'
+        iconCt2.style.color='#000'
+        
+        footer_list3.style.backgroundColor='#FFF'
+        footer_list3.style.border='none'
+        footer_list3.style.borderRadius='0'
+        sub_list3.style.color='#000'
+        sub_list3.style.fontWeight='400'
+        iconCt3.style.color='#000'
+
+      }
+    }
+// //////////////////////////////////////////////////
+
+    moonBtn.onclick=function(){
+      var bg = backgroundContainer.style.background='#fff';
+      if (bg){       
+        sunBtn.style.display='block'
+        bTN.style.background='#ffd154'
+        sunBtn.style.transform='translateX(0px)'
+        moonBtn.style.display='none'
+        backgroundContainer.style='#body-container';
+        infoContainer.style.backgroundColor='#333';
+        infoContainer.style.boxShadow='0px 5px 30px 10px';
+        avtMode.style.border='2px solid #fff'
+        nameMode.style=color='#fff';
+        sub_nameMode.style=color='#fff';
+
+        img_icon1.style.backgroundColor='#444'  
+        img_icon1.style.boxShadow='5px 10px 10px 5px #000'
+        img_icon2.style.backgroundColor='#444'
+        img_icon2.style.boxShadow='5px 10px 10px 5px #000'  
+        img_icon3.style.backgroundColor='#444'
+        img_icon3.style.boxShadow='5px 10px 10px 5px #000'  
+        img_icon4.style.backgroundColor='#444'  
+        img_icon4.style.boxShadow='5px 10px 10px 5px #000'
+        // 
+        navMode1.style.backgroundColor='#000'
+        navMode2.style.backgroundColor='#000'
+        sub_navMode1.style.color='#fff'
+        sub_navMode2.style.color='#fff'
+        sub_navMode1.style.fontWeight='500'
+        sub_navMode2.style.fontWeight='500'
+
+        // 
+        footer_list1.style.backgroundColor='#0063ec'
+        footer_list1.style.border='none'
+        sub_list1.style.color='#fff'
+        sub_list1.style.fontWeight='400'
+        iconCt1.style.color='#fff'
+
+        footer_list2.style.backgroundColor='#0063ec'
+        footer_list2.style.border='none'
+        sub_list2.style.color='#fff'
+        sub_list2.style.fontWeight='400'
+        iconCt2.style.color='#fff'
+        
+        footer_list3.style.backgroundColor='#0063ec'
+        footer_list3.style.border='none'
+        sub_list3.style.color='#fff'
+        sub_list3.style.fontWeight='400'
+        iconCt3.style.color='#fff'
+
+      }
+    }
+
+   
+
+  </script>
+
+</body>
+   
+</html>
