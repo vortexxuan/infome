@@ -16,7 +16,7 @@ html{
    right: 0;
    left: 0;
    bottom: 0;
-   background-image:url(/assets/IMG/bg.jpg) ;
+   
    background-size: cover;
    
    display: flex;
